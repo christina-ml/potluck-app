@@ -12,6 +12,7 @@ class DishCard extends Component {
     <div className="dish-card">
       <div>dish name: {name}</div>
       <img src={image} alt="dish" />
+      <button onClick={this.props.handleReset}>reset</button>
     </div>
     )
   }
