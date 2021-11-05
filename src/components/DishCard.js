@@ -6,11 +6,11 @@ class DishCard extends Component {
   }
 
   render() {
-    // const { image, name } = this.props.dish
-    
+    const { image, name } = this.props.dish
+
     return <div className="dish-card">
-      <div>dish name: {this.props.dish.name}</div>
-      <img src={this.props.dish.image} alt="dish" />
+      <div>dish name: {name}</div>
+      <img src={image} alt="dish" />
     </div>;
   }
 }
