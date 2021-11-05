@@ -106,7 +106,11 @@ class App extends Component {
     })
   };
 
-  handleReset = () => {};
+  handleReset = () => {
+    this.setState({
+      dishesOnTable: [],
+    })
+  };
 
   render() {
     const { possibleDishes, dishIndex, dishesOnTable } = this.state;
