@@ -103,7 +103,7 @@ class App extends Component {
           <button onClick={this.changeDish}>Change dish</button>
           <button onClick={this.addDish}>Add dish to table</button>
           <button onClick={this.handleReset}>Clear table</button>
-          <div>Currently selected dish:</div>
+          <div>Currently selected dish: {this.state.possibleDishes[this.state.dishIndex].name}</div>
           <div>Number of dishes on table:</div>
         </div>
       </div>
