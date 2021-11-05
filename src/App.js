@@ -97,13 +97,20 @@ class App extends Component {
     })
   };
 
-  addDish = () => {};
+  addDish = () => {
+    const { dishesOnTable, possibleDishes, dishIndex } = this.state;
+
+    this.setState({
+      dishesOnTable: [...dishesOnTable, possibleDishes[dishIndex]]
+    })
+  };
 
   handleReset = () => {};
 
   render() {
     const { possibleDishes, dishIndex, dishesOnTable } = this.state;
     const currentDish = possibleDishes[dishIndex];
+    console.log({ dishesOnTable });
 
     return (
       <div className="App">
