@@ -115,7 +115,7 @@ class App extends Component {
   render() {
     const { possibleDishes, dishIndex, dishesOnTable } = this.state;
     const currentDish = possibleDishes[dishIndex];
-    console.log({ dishesOnTable });
+    // console.log({ dishesOnTable });
 
     let dishesToDisplay = dishesOnTable.map((dish, i) => {
       return (
