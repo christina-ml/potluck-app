@@ -89,7 +89,13 @@ class App extends Component {
     };
   }
 
-  changeDish = () => {};
+  changeDish = () => {
+    const { possibleDishes } = this.state;
+
+    this.setState({
+      dishIndex: Math.floor(Math.random() * possibleDishes.length)
+    })
+  };
 
   addDish = () => {};
 
@@ -106,7 +112,7 @@ class App extends Component {
           <button onClick={this.changeDish}>Change dish</button>
           <button onClick={this.addDish}>Add dish to table</button>
           <button onClick={this.handleReset}>Clear table</button>
-          <div>Currently selected dish:{" "}{currentDish.name}</div>
+          <div>Currently selected dish: {currentDish.name}</div>
           <div>Number of dishes on table: {dishesOnTable.length}</div>
         </div>
       </div>
