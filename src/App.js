@@ -58,7 +58,34 @@ class App extends Component {
           image:
             "https://images-gmi-pmc.edge-generalmills.com/1156f4ec-29c8-4cd9-80db-7d4ee330b1d0.jpg",
         },
+        {
+          name: "collard greens",
+          image:
+            "https://www.simplyrecipes.com/thmb/S7sx700tVOsYqS4sYcr-47FY1ew=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2005__12__collard-greens-vertical-a-1600-1-370d08b48fa2422ea910e84561450452.jpg",
+        },
+        {
+          name: "green bean casserole",
+          image:
+            "https://hips.hearstapps.com/delish/assets/17/38/1505763623-green-bean-casserole-148-1.jpg",
+        },
+        {
+          name: "rice and beans",
+          image:
+            "https://www.liveeatlearn.com/wp-content/uploads/2019/02/spanish-rice-beans-vert.jpg",
+        },
+        {
+          name: "stuffing",
+          image:
+            "https://www.howsweeteats.com/wp-content/uploads/2020/11/best-stuffing-12-500x500.jpg",
+        },
+        {
+          name: "sweet potato casserole",
+          image:
+            "https://hips.hearstapps.com/hmg-prod/images/delish-sweet-potato-casserole-marshmallows-horizontal-1530552310.jpg",
+        },
       ],
+      dishIndex: 0,
+      dishesOnTable: [],
     };
   }
 
@@ -73,9 +100,9 @@ class App extends Component {
       <div className="App">
         <h1>8.2 Potluck Feast 🥧</h1>
         <div>
-          <button>Change dish</button>
-          <button>Add dish to table</button>
-          <button>Clear table</button>
+          <button onClick={this.changeDish}>Change dish</button>
+          <button onClick={this.addDish}>Add dish to table</button>
+          <button onClick={this.handleReset}>Clear table</button>
           <div>Currently selected dish:</div>
           <div>Number of dishes on table:</div>
         </div>
