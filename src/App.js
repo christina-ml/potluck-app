@@ -96,6 +96,8 @@ class App extends Component {
   handleReset = () => {};
 
   render() {
+    const { possibleDishes, dishIndex } = this.state;
+
     return (
       <div className="App">
         <h1>8.2 Potluck Feast 🥧</h1>
@@ -103,7 +105,7 @@ class App extends Component {
           <button onClick={this.changeDish}>Change dish</button>
           <button onClick={this.addDish}>Add dish to table</button>
           <button onClick={this.handleReset}>Clear table</button>
-          <div>Currently selected dish: {this.state.possibleDishes[this.state.dishIndex].name}</div>
+          <div>Currently selected dish: {possibleDishes[dishIndex].name}</div>
           <div>Number of dishes on table:</div>
         </div>
       </div>
