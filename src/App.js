@@ -99,9 +99,10 @@ class App extends Component {
 
   addDish = () => {
     const { dishesOnTable, possibleDishes, dishIndex } = this.state;
+    const currentDish = possibleDishes[dishIndex];
 
     this.setState({
-      dishesOnTable: [...dishesOnTable, possibleDishes[dishIndex]]
+      dishesOnTable: [...dishesOnTable, currentDish]
     })
   };
 
