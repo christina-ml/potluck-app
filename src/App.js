@@ -96,7 +96,7 @@ class App extends Component {
   handleReset = () => {};
 
   render() {
-    const { possibleDishes, dishIndex } = this.state;
+    const { possibleDishes, dishIndex, dishesOnTable } = this.state;
     const currentDish = possibleDishes[dishIndex];
 
     return (
@@ -107,7 +107,7 @@ class App extends Component {
           <button onClick={this.addDish}>Add dish to table</button>
           <button onClick={this.handleReset}>Clear table</button>
           <div>Currently selected dish:{" "}{currentDish.name}</div>
-          <div>Number of dishes on table:</div>
+          <div>Number of dishes on table: {dishesOnTable.length}</div>
         </div>
       </div>
     );
