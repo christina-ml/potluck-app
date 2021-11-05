@@ -117,6 +117,12 @@ class App extends Component {
     const currentDish = possibleDishes[dishIndex];
     console.log({ dishesOnTable });
 
+    let dishesToDisplay = dishesOnTable.map((dish, i) => {
+      return (
+        <DishCard key={dish.name + i} dish={dish} />
+      )
+    })
+
     return (
       <div className="App">
         <h1>8.2 Potluck Feast 🥧</h1>
@@ -126,6 +132,7 @@ class App extends Component {
           <button onClick={this.handleReset}>Clear table</button>
           <div>Currently selected dish: {currentDish.name}</div>
           <div>Number of dishes on table: {dishesOnTable.length}</div>
+          <div className='dish-grid'>{dishesToDisplay}</div>
         </div>
       </div>
     );
